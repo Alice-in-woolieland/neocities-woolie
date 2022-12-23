@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        body{
+            overflow:hidden;
+        }
+        .poop {
+            width: 80%;
+            height: 85vh;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border: solid 1px var(--accent);
+            overflow: auto;
+            padding:10px;
+
+        }
+
+        .mainBody {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .button {
+            max-width: 150px;
+            min-width: 100px;
+            height: 150px;
+            border-style: double;
+            padding: 4px;
+            border-color: var(--accent);
+            flex: auto;
+            margin: 4px;
+        }
+
+        .button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin:auto;
+            padding: 20px;
+            background: #fff;
+            height:95%;
+            width:90%;
+            position: relative;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            text-decoration: none;
+        }
+
+        .popup .content {
+            overflow: auto;
+            height: 90%;
+            margin: auto;
+        }
+
+        .popup img {
+            width: 80%;
+            margin: auto;
+        }
+
+        .imagegallery img {
+            width: 50%;
+            min-width: 0;
+            padding: 5px;
+            box-sizing: border-box;
+            flex-grow: 2;
+            flex-shrink: 1;
+            flex-basis: auto;
+            object-fit: cover;
+        }
+
+        .imagegallery {
+            width: 98%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: stretch;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div align="center">
+        <h3>ART + OC ARCHIVES</h3>
+        <div class="poop">
+            <div class="mainBody">
+
+                <div class="button">
+                    <a href="#tof"><img title="Tower of Fantasy OC"
+                            src="https://cdn.discordapp.com/attachments/1000969691122106368/1008404327624360087/unknown.png"></a>
+                </div>
+                <div class="button">
+                    <a href="#kazuha"><img title="Kazuha Smoking Weed"
+                            src="https://cdn.discordapp.com/attachments/897538406693896243/1055752869317464084/image.png"></a>
+                </div>
+                <div class="button">
+                    <a href="#misha"><img
+                            src="https://cdn.discordapp.com/attachments/897538406693896243/1055754916880203796/image.png"></a>
+                </div>
+                <div class="button">
+                    <a href="#vio"><img
+                            src="https://cdn.discordapp.com/attachments/940812265840578611/960694517718200371/unknown.png"></a>
+                </div>
+            </div>
+            <h3>(●'◡'●)<br><br>More coming soon!</h3>
+            <!--Overlays-->
+            <div id="tof" class="overlay">
+                <div class="popup">
+                    <h2>Tower of Fantasy</h2>
+                    <a class="close" href="#">×</a>
+                    <div class="content">
+                        <img
+                            src="https://cdn.discordapp.com/attachments/1000969691122106368/1008388631892852736/unknown.png"><br>
+                        Date: 8/14/22 Caption: A quick doodle of my TOF persona.
+                        <br>
+                        <h3>About Her</h3>
+                        I downloaded Tower of Fantasy largely because of the character creator. I love making original
+                        characters, especially trying to create unique characters within somewhat limited character
+                        creators. Tower of Fantasy strikes a good balance between allowing enough character
+                        customization to
+                        make unique characters, but not too much to make it hard to make an appealing character. <br>
+                        <h3>Gallery</h3>
+                        <div class="imagegallery">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1000969691122106368/1008219688452493322/unknown.png">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1000969691122106368/1008221467135185037/unknown.png">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1000969691122106368/1008404327624360087/unknown.png">
+                        </div>
+                        <h3>(o゜▽゜)o☆</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="kazuha" class="overlay">
+                <div class="popup">
+                    <h2>Kazuha Smoking Weed</h2>
+                    <a class="close" href="#">×</a>
+                    <div class="content">
+                        <img
+                            src="https://cdn.discordapp.com/attachments/847670345909534769/1007179549194338344/IMG_4570.png"><br>
+                        Date: 8/10/22 Caption: A drawing of Kazuha Smoking Weed.
+                        <br>
+                        <h3>About the art</h3>
+                        As a thank you gift to my friend, I told them I'd draw them anything they requested. Of course,
+                        they requested Kazuha smoking a joint. Yes, I gave him top surgery scars.<br>
+                        <h3>Sketch</h3>
+                        <div class="imagegallery">
+                            <img height="500"
+                                src="https://cdn.discordapp.com/attachments/1000969691122106368/1007157235698380900/PXL_20220811_052300442.MP.jpg">
+                        </div>
+                        <h3>(o゜▽゜)o☆</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="misha" class="overlay">
+                <div class="popup">
+                    <h2>Misha</h2>
+                    <a class="close" href="#">×</a>
+                    <div class="content">
+                        <img
+                            src="https://cdn.discordapp.com/attachments/847670345909534769/1007129144548655174/unknown.png"><br>
+                        Date: 5/XX/22 Caption: A compilation of drawings of Misha.
+                        <br>
+                        <h3>About Her</h3>
+                        Misha is one of my favorite Ocs, inspired visually from characters such as Maka from Soul Eater,
+                        Zuko from ATLA, and Kagami from MLB. I originally designed her to have everything I like in a
+                        character design, so I like to draw her in all sorts of outfits that I find visually
+                        interesting.<br>
+                        <h3>Gallery</h3>
+                        <div class="imagegallery">
+                            <img height="500"
+                                src="https://cdn.discordapp.com/attachments/847670345909534769/1007127202271334400/PXL_20220811_032343844.MP.jpg">
+                        </div>
+                        <h3>(o゜▽゜)o☆</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="vio" class="overlay">
+                <div class="popup">
+                    <h2>Vio Lynn</h2>
+                    <a class="close" href="#">×</a>
+                    <div class="content">
+                        <img
+                            src="https://cdn.discordapp.com/attachments/940812265840578611/960694517718200371/unknown.png"><br>
+                        Date: 4/04/22 Caption: A WIP of her Vtuber Model
+                        <br>
+                        <h3>About Her</h3>
+                        I designed Vio Lynn as a Vtubing Persona for myself to use. Her model is nowhere near complete,
+                        however I'm planning on bringing her back from the dead (lol)<br>
+                        I hope to bring her into reality eventually and stream as her!
+                        <h3>Gallery</h3>
+                        <div class="imagegallery">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/940812265840578611/959676750856601690/unknown.png">
+                            <img
+                                src="https://cdn.discordapp.com/attachments/940812265840578611/960302394175004753/unknown.png">
+                            <img src="https://cdn.discordapp.com/attachments/940812265840578611/959685519007158283/unknown.png">
+                            <img src="https://cdn.discordapp.com/attachments/940812265840578611/959707467510595584/unknown.png">
+                            <img src="https://cdn.discordapp.com/attachments/940812265840578611/960310407778664478/unknown.png">
+                            <img src="https://cdn.discordapp.com/attachments/940812265840578611/960325558892380190/unknown.png">
+                        </div>
+                        <h3>(o゜▽゜)o☆</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span>⠀</span><!-- braille blank is placed here -->
+</body>
+
+</html>
