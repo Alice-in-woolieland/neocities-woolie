@@ -7,16 +7,24 @@
       <title>webbed site</title>
       <link rel="icon" type="image/png" href="favicon.png">
       <link href="style.css" rel="stylesheet" type="text/css" media="all">
-     <!--  The script is so that I can set certain pages to load within the iframe depending on the URL. Doesn't work yet so commenting it out of the way for now.
+      <meta property="og:url" content="http://www.woolie.neocities/org/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Woolie.neocities" />
+      <meta property="og:description" content="Alice in Woolieland" />
+      <!--<meta property="og:image"
+        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />-->
+     <!--  The script is so that I can set certain pages to load within the iframe depending on the URL. Doesn't work yet so commenting it out of the way for now.     -->
      <script> 
-         function triggerBtnClick()
+          function triggerBtnClick()
          {
          var urlHash = location.hash;
-         const buttonID = urlHash.slice(1);
-         document.getElementById('buttonID').submit();
+         if (urlHash !== null) {
+           const buttonID = urlHash.slice(1);
+           document.getElementById(buttonID).click();
+           }
          }
       </script>
-       -->
+
    </head>
    <body class="scroll" onload="triggerBtnClick()"> <!-- I have no idea what scroll does ngl but removing it breaks things so I just keep it in for luck at this point -->
       <div id="container"> <!-- Keeps everything nice and neat by putting it in one box. -->
