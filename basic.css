@@ -1,6 +1,6 @@
  :root {
 
-     --dk-color,#003800;
+     --dk-color:#003800;
      --mid-color:#3bae73;
      --lt-color:#c2ffd3;
      --dkest-color:#000d00;
@@ -280,4 +280,9 @@ textarea {
   border-style:double;
   padding:4px;
   border-color: var(--accent);
+}
+/* h4 */
+.h4 {
+  text-align:center;
+  font-weight:bold;
 }
