@@ -10,12 +10,14 @@
       <script> 
          function triggerBtnClick()
          {
-         var buttonID = window.location.hash;
-         document.getElementById('buttonID').click(); 
-         buttonID.addEventListener('click', (e)=> alert('The url of this page is: ' + window.location.hash));
+         var urlHash = location.hash;
+         const buttonID = urlHash.slice(1);
+         document.getElementById(buttonID).click();
          }
       </script>
-      <!--The script is so that I can set certain pages to load within the iframe depending on the URL.-->
+      <!--The script is so that I can set certain pages to load within the iframe depending on the URL.
+      
+             document.getElementById('buttonID').click(); -->
    </head>
    <body class="scroll" onload="triggerBtnClick()"> <!-- I have no idea what scroll does ngl but removing it breaks things so I just keep it in for luck at this point -->
       <div id="container"> <!-- Keeps everything nice and neat by putting it in one box. -->
