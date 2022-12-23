@@ -7,8 +7,16 @@
       <title>webbed site</title>
       <link rel="icon" type="image/png" href="favicon.png">
       <link href="style.css" rel="stylesheet" type="text/css" media="all">
+      <script> 
+         function triggerBtnClick()
+         {
+         var buttonID = window.location.hash
+         document.getElementById(buttonID).click(); 
+         }
+      </script>
+      <!--The script is so that I can set certain pages to load within the iframe depending on the URL.-->
    </head>
-   <body class="scroll"> <!-- I have no idea what scroll does ngl but removing it breaks things so I just keep it in for luck at this point -->
+   <body class="scroll" onload="triggerBtnClick()"> <!-- I have no idea what scroll does ngl but removing it breaks things so I just keep it in for luck at this point -->
       <div id="container"> <!-- Keeps everything nice and neat by putting it in one box. -->
       <div id="header"> <!-- Header n stuff -->
       <img draggable="false" src="https://64.media.tumblr.com/7771bcccf1a4fe65aff37974f97530d6/3a4de8e883b23a6e-0d/s250x400/c3df3eeb5051de4f07fb970ec263c4e08858ab15.pnj" height="100" style="float:left; margin-bottom:5px; margin-left:5px;" class="floating">
