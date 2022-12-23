@@ -1,0 +1,278 @@
+ :root {
+
+     --dk-color,#003800;
+     --mid-color:#3bae73;
+     --lt-color:#c2ffd3;
+     --dkest-color:#000d00;
+     --accent:#65c392;
+}
+@font-face {
+   font-family: awemono; 
+   src: url('/Awe Mono Gold.woff')format("truetype");
+}
+@font-face {
+   font-family: rulergold; 
+   src: url('/RulerGold.woff')format("truetype");
+}
+ html, body {
+     margin:0;
+     padding-top:25px;
+     padding:0;
+     height:100%;
+     font-family: 'MS PGothic';
+     font-size:12px;
+     background-image:url("https://cdn.discordapp.com/attachments/885396181788786729/1038434359956488285/eizoukengreener.png");
+     background-color: #cccccc;
+     background-repeat:repeat;
+     background-size:contain;
+     color:var(--dkest-color);
+     padding:1px;
+     overflow-y:hidden;
+}
+body a {
+  color:var(--accent);
+  font-weight:bold;
+  }
+ #container {
+     max-width:900px;
+     margin:0 auto;
+     margin-top:15px;
+     height:100%;
+}
+ h1, h3, h5 {
+     color:var(--dk-color);
+}
+ h2, h4, h6 {
+     color:var(--accent);
+  }
+ #header {
+     max-width:850px;
+     height:110px;
+     margin-left:5px;
+     margin-right:5px;
+     margin:0 auto;
+     background-color:var(--lt-color);
+     border:1px solid var(--dkest-color);
+     border-radius:2px;
+}
+
+ .title {
+     font-size:30px;
+     text-align:center;
+     font-family: 'rulergold';
+     padding:10px 0;
+}
+ #wrapper {
+     margin:0 auto;
+     max-width:860px;
+}
+.content {
+  padding:10px;
+  }
+.content a:hover {
+  color:var(--mid-color);
+}
+ #two-boxes {
+     display:flex;
+     flex-wrap:wrap;
+     max-width:900px;
+}
+ .box-one, .box-two, .box-three, .box-four, .box-five, .box-six {
+     border:1px solid var(--dkest-color);
+     background-color:var(--lt-color);
+     overflow:auto;
+}
+ .box-one, .box-two {
+     height:200px;
+     width:418px;
+     margin-left:5px;
+}
+ .box-one {
+     margin-top:5px;
+     margin-right:5px;
+}
+ .box-two {
+     margin-top:5px;
+     margin-right:5px;
+}
+ .box-three {
+     margin-left:5px;
+     margin-top:5px;
+     width:260px;
+     height:326px;
+}
+ .box-four {
+     margin-top:5px;
+     margin-left:5px;
+     width:581px;
+     height:326px;
+}
+ .section-title {
+     text-align:center;
+     padding-top:5px;
+     padding-bottom:5px;
+     font-family: 'rulergold';
+     background-color:var(--mid-color);
+     color:var(--dkest-color);
+     font-size:1.5em;
+     
+}
+
+ .nav-wrapper {
+     display:flex;
+     flex-wrap:wrap;
+     width:400px;
+     height:50px;
+     margin:0 auto;
+     justify-content:space-evenly;
+     margin-top:5px;
+     font-family: 'MS PGothic';
+}
+ button {
+     width:190px;
+     height:35px;
+     background-color:var(--mid-color);
+     color:var(--dkest-color);
+     border:none;
+     margin-top:5px;
+     margin-right:5px;
+     font-family: 'MS PGothic';
+}
+ button a {
+    color:var(--dkest-color);
+    font-family: 'MS PGothic';
+  }
+  button:hover {
+    background-color: var(--lt-color);
+  }
+  p {
+     padding:5px;
+}
+ p a {
+  color:var(--dkest-color);
+  font-weight:bold;
+  }
+ p a:hover {
+   color:var(--mid-color);
+ }
+ .scroll::-webkit-scrollbar-track {
+     background-color: var(--lt-color);
+}
+ .scroll::-webkit-scrollbar {
+     width: 10px;
+     background-color: #f2b1a4;
+}
+ .scroll::-webkit-scrollbar-thumb {
+     background-color: var(--dk-color);
+}
+ #footer {
+     text-align:center;
+     padding-top:5px;
+     margin-bottom:5px;
+}
+ #footer p {
+     background-color:white;
+     display:block;
+     width:160px;
+     margin:0 auto;
+     margin-top:5px;
+     margin-bottom:5px;
+     padding:5px;
+}
+textarea {
+  background-color:var(--dkest-color);
+  color:var(--lt-color);
+  font-size:10px;
+  }
+ @media only screen and (max-width: 860px) {
+     html, body {
+         overflow:visible;
+    }
+    #header {
+      width:97.6%;
+    }
+     #container {
+         width:100%;
+    }
+     .box-one, .box-two, .box-three, .box-four, .box-five, .box-six {
+         width:100%;
+    }
+    .box-two {
+      order:1;
+    }
+    .box-one {
+      order:2;
+    }
+     .box-three {
+         width:98%;
+    }
+     .three-boxes {
+         width:98%;
+    }
+     .two-boxes {
+         width:100%;
+    }
+     .wrapper {
+         width:100%;
+    }
+}
+
+/* for having multiple columns in one box */
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+    border:1px solid var(--dkest-color);
+     background-color:var(--lt-color);
+     overflow:auto;
+     margin-left:5px;
+     margin-right:5px;
+     padding-left:15px;
+     padding-bottom:15px;
+}
+ /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+} 
+/* pagedoll */
+@media screen and (max-width: 1100px) {
+    .pagedoll {
+        display: none;
+    }
+}
+.pagedoll:hover {
+  transform: rotate(-1deg) scale(1.01);
+}
+/* list style*/
+.ls {
+  list-style-type:"->";
+  list-style-position: inside;
+}
+/* disabled buttons */
+.disabled {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+.disabled a {
+  text-decoration: none;
+}
+/* animations */
+@keyframes floating {
+  from {transform:translateY(5px);}
+  to {transform:translateY(-5px);}
+}
+.floating {
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+/* for pixel art */
+.pixel {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
