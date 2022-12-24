@@ -362,4 +362,30 @@
    font-weight: bold;
  }
 
- /* hgajkafljdsf */
+ /* wavingtext */
+
+ .waviy {
+   position: relative;
+ }
+
+ .waviy span {
+   position: relative;
+   display: inline-block;
+   font-weight: bold;
+   animation: waviy 1s infinite;
+   animation-delay: calc(.1s * var(--i));
+
+ }
+
+ @keyframes waviy {
+
+   0%,
+   40%,
+   100% {
+     transform: translateY(0)
+   }
+
+   20% {
+     transform: translateY(-5px)
+   }
+ }
