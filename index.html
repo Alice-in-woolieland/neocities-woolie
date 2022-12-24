@@ -1,63 +1,82 @@
 <!DOCTYPE html>
-<!-- talking talking talking talking so that this page has the most charcter edits  edit edit edit edit edit please notice my new button!!! AUAAUGGHHHHHHH EDITING EDIT ITING EDIYITNG AFHGFSHDFSFKDS.. adding more charactes.. adding more characters.. adding morecharacters pleassseeee neocities recognize this is the more important of my pages pleasseenhiafhdsajkfds-->
+<!-- 
+   HI! I assume you are here because you want to reference my code!!! That's totally fine, I tried to comment out my code so you know how it works. If you have any questions at all, feel free to reach out to me on tumblr. I'm planning on setting up an email as well to field any questions. You can also reach out to any of the talented people in my webring. 
+-->
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>webbed site</title>
-      <link rel="icon" type="image/png" href="favicon.png">
-      <link href="style.css" rel="stylesheet" type="text/css" media="all">
-      <meta property="og:url" content="http://www.woolie.neocities/org/" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Woolie.neocities" />
-      <meta property="og:description" content="Alice in Woolieland" />
-      <!--<meta property="og:image"
-        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />-->
-     <!--  The script is so that I can set certain pages to load within the iframe depending on the URL. Doesn't work yet so commenting it out of the way for now.     -->
-     <script> 
-          function triggerBtnClick()
-         {
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>webbed site</title>
+   <link rel="icon" type="image/png" href="favicon.png">
+   <link href="style.css" rel="stylesheet" type="text/css" media="all">
+   <meta property="og:url" content="http://www.woolie.neocities/org/" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Woolie.neocities" />
+   <meta property="og:description" content="Alice in Woolieland" />
+   <meta property="og:image" content="/eizouken.png" />
+   <!--  The script is so that I can set certain pages to load within the iframe depending on the URL. Doesn't work yet so commenting it out of the way for now.     -->
+   <script>
+      function triggerBtnClick() {
          var urlHash = location.hash;
          if (urlHash !== null) {
-           const buttonID = urlHash.slice(1);
-           document.getElementById(buttonID).click();
-           }
+            const buttonID = urlHash.slice(1);
+            document.getElementById(buttonID).click();
          }
-      </script>
+      }
+   </script>
 
-   </head>
-   <body class="scroll" onload="triggerBtnClick()"> <!-- I have no idea what scroll does ngl but removing it breaks things so I just keep it in for luck at this point -->
-      <div id="container"> <!-- Keeps everything nice and neat by putting it in one box. -->
+</head>
+
+<body class="scroll" onload="triggerBtnClick()">
+   <!-- I have no idea what scroll does ngl but removing it breaks things so I just keep it in for luck at this point -->
+   <div id="container"> <!-- Keeps everything nice and neat by putting it in one box. -->
       <div id="header"> <!-- Header n stuff -->
-      <img draggable="false" src="https://64.media.tumblr.com/7771bcccf1a4fe65aff37974f97530d6/3a4de8e883b23a6e-0d/s250x400/c3df3eeb5051de4f07fb970ec263c4e08858ab15.pnj" height="100" style="float:left; margin-bottom:5px; margin-left:5px;" class="floating">
-      <img draggable="false" src="https://64.media.tumblr.com/8be3aad9f1b132d98fdc787fdcce2747/3a4de8e883b23a6e-3c/s250x400/89e046a362d2f70757feddd3b982948291315c53.pnj" height="90" style="float:right; margin-top:5px; margin-right:5px;" class="floating">
-      <h3 class="title">welcome to woolie.neocities</h3>
+         <img draggable="false"
+            src="https://64.media.tumblr.com/7771bcccf1a4fe65aff37974f97530d6/3a4de8e883b23a6e-0d/s250x400/c3df3eeb5051de4f07fb970ec263c4e08858ab15.pnj"
+            height="100" style="float:left; margin-bottom:5px; margin-left:5px;" class="floating">
+         <img draggable="false"
+            src="https://64.media.tumblr.com/8be3aad9f1b132d98fdc787fdcce2747/3a4de8e883b23a6e-3c/s250x400/89e046a362d2f70757feddd3b982948291315c53.pnj"
+            height="90" style="float:right; margin-top:5px; margin-right:5px;" class="floating">
+         <h3 class="title">welcome to woolie.neocities</h3>
       </div>
       <div id="wrapper"> <!-- This is where the majority of my content exists -->
          <div id="two-boxes" style="height:500px"> <!-- Both of these boxes are contained within a minibox -->
             <div class="box-four scroll" style="height:500px"> <!-- This is the large box -->
-                 <iframe name="mainHub" src="/frame/frameindex.html" align="center" width=100% height=500px frameborder="0"></iframe>
-              </div>
+               <iframe name="mainHub" src="/frame/frameindex.html" align="center" width=100% height=500px
+                  frameborder="0"></iframe>
+            </div>
             <div class="box-three" style="height:500px; overflow:hidden;"> <!-- This is the navigation box -->
                <div class="section-title" style="top:0; width:100%;">NaviBar</div>
                <a href="/frame/frameindex.html" target="mainHub"><button style="width:100%">Index</button></a>
-               <a href="/frame/aboutme.html" target="mainHub" id="aboutme" ><button  style="width:100%">About me/Links</button></a>
-               <a href="/frame/webreccs.html" target="mainHub" id="webreccs"><button style="width:100%">Buttonz</button></a>
-               <a href="/shrines/reagan.html" id="reagan" target="mainHub"><button style="width:100%">Reagan Shrine</button></a>
-               <a href="/shrines/reigen.html" id="reigen" target="mainHub"><button style="width:100%">Reigen Shrine</button></a>
-               <a href="/frame/articles.html" id="articles" target="mainHub"><button  style="width:100%">Articles [NEW!]</button></a>
-               <a href="/shrines/skittles.html" target="mainHub" id="skittles" ><button style="width:100%;">Skittles the Bird [NEW!]</button></a>
-               <a href="/frame/myart.html"  target="mainHub"  id="myart" ><button style="width:100%;">Art/OCs [NEW!]</button></a>
+               <a href="/frame/aboutme.html" target="mainHub" id="aboutme"><button style="width:100%">About
+                     me/Links</button></a>
+               <a href="/frame/webreccs.html" target="mainHub" id="webreccs"><button
+                     style="width:100%">Buttonz</button></a>
+               <a href="/shrines/reagan.html" id="reagan" target="mainHub"><button style="width:100%">Reagan
+                     Shrine</button></a>
+               <a href="/shrines/reigen.html" id="reigen" target="mainHub"><button style="width:100%">Reigen
+                     Shrine</button></a>
+               <a href="/frame/articles.html" id="articles" target="mainHub"><button style="width:100%">Articles
+                     [NEW!]</button></a>
+               <a href="/shrines/skittles.html" target="mainHub" id="skittles"><button style="width:100%;">Skittles the
+                     Bird [NEW!]</button></a>
+               <a href="/frame/myart.html" target="mainHub" id="myart"><button style="width:100%;">Art/OCs
+                     [NEW!]</button></a>
                <a href="/oldindex.html"><button style="width:100%">Classic Homepage</button></a>
                <button class="disabled" style="width:100%">-WIP-</button>
             </div>
-          </div>
+         </div>
       </div>
-      </div>
-      <div class="pagedoll" style="right:5px; bottom:5px; position:absolute;" title="home"> <!-- and all of this is my pagedoll! -->
-        <a href="/">
-        <img draggable="false" src="https://64.media.tumblr.com/9e40a5055e3a88459964e3e5c822305e/232682218b0d3305-d5/s500x750/cfa72e0476bb9b2be4d88dcfbb2313148394bbba.pnj" alt="pagedoll" style="max-width: 300px;">
-        </a>
-      </div>
-   </body>
+   </div>
+   <div class="pagedoll" style="right:5px; bottom:5px; position:absolute;" title="home">
+      <!-- and all of this is my pagedoll! -->
+      <a href="/">
+         <img draggable="false"
+            src="https://64.media.tumblr.com/9e40a5055e3a88459964e3e5c822305e/232682218b0d3305-d5/s500x750/cfa72e0476bb9b2be4d88dcfbb2313148394bbba.pnj"
+            alt="pagedoll" style="max-width: 300px;">
+      </a>
+   </div>
+</body>
+
 </html>
