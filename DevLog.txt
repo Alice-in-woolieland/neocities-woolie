@@ -1,0 +1,68 @@
+Hello! 
+
+This is my secret log where I talk about what my plans are for my website.
+Congrats for finding it. 
+
+Though to be honest, you probably found it because I told you to look for it.
+
+This way I can hopefully document how my website works for people who are interested.
+
+As of 12/24/22, My index.html file is mostly an iframe that loads in simple webpages. 
+
+You can think of it like a picture frame. It doesn't actually do much, other than having the buttons on the side for navigation.
+
+The real meat of the webpage inside that frame- the "picture" so to speak.
+
+Just because the frame doesn't do much though, doesn't mean it's simple. 
+
+iframe is a very useful tool in html. It essencially creates a box in your webpage where you can render whatever you want. You can render images, videos, text, but for our purposes, I'm using it to render other webpages.
+
+The buttons on the side of the Iframe, (The NaviBar), are actually regular old links. When you click them, I have it set up to open in the iframe, instead of the browser. 
+
+I did this by giving the iframe a name- it's name is "mainHub" since it's the main section of the website. 
+
+When you add an anchor tag into html, (<a>) you can actually choose a target for it to open up in. What I did was simple, I told it to open up in mainHub.
+
+You can set it up for yourself on your own website by using the following snippet of code. 
+
+<iframe name="mainHub">
+<a href="/oldman.png" target="mainHub">old man</a>
+
+Now, you might notice here, that if you use that, the iframe starts out blank. My website doesn't do that, and it's for a very simple reason. Similar to an <img> tag, you must give it a source to start. 
+
+in reality, my website's code looks a little more like this-
+
+<iframe name="mainHub" src="/frame/frameindex.html>
+
+I have an index for my frame, a default home page that it can return to. 
+
+Now, this works wonders for me, it looks clean, makes my website easy to navigate, saves on hosting costs-
+
+however, there is one huge issue. I can't send people permalinks to specific pages on my website. I could send them links to the plain text files, but that looks unfinished and sloppy. 
+
+It took me a while, and outsourcing for help, but I found a way to make it work. 
+
+First things first, you need a script. I put this in my <head> on my index.html.
+
+<script>
+      function triggerBtnClick() {
+         var urlHash = location.hash;
+         if (urlHash !== null) {
+            const buttonID = urlHash.slice(1);
+            document.getElementById(buttonID).click();
+         }
+      }
+</script>
+
+What this script does is it checks to see if your url has a hash in it. If there isn't one, it does nothing. If you do have one however, It clicks the link with the same ID as the hash. 
+
+So if I send a link that says : 'woolie.neocities.org/#skittles', 
+It'll find "#skittles", remove the hash, making it "skittles" and then press the link with that ID.
+
+As long as I give all of my links IDs, then I can redirect people to specific pages on my website. 
+
+I have this function trigger on load, so it loads near instantly alongside the webpage. 
+
+For now, that's all I have to say about my webpage. I feel like the rest of it is pretty straightforward. I hope to add a directory page so that people can better inspect my code. 
+
+I also hope to add permalinks that allow people to link to specific pages. Of course, this is all going to be in the future. 
