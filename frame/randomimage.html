@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+    <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        img {
+            width: 90%;
+            height: 90vh;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+
+<body style="overflow:hidden;">
+    <div align="center">
+        <div class="borderbox" style="text-align:center;">
+            <script>
+                function getRandomInt(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
+                }
+
+                document.write('<img src="/randomimage/' + getRandomInt(1, 13) + '.jpg">')
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
