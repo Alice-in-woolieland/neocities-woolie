@@ -8,13 +8,13 @@
  }
 
  @font-face {
-   font-family: awemono;
-   src: url('/Awe Mono Gold.woff')format("truetype");
+   font-family: rulergold;
+   src: url('fonts/RulerGold.woff')format("truetype");
  }
 
  @font-face {
-   font-family: rulergold;
-   src: url('/RulerGold.woff')format("truetype");
+   font-family: awemono;
+   src: url('fonts/Awe\ Mono\ Gold.woff')format("truetype");
  }
 
  html,
@@ -72,8 +72,12 @@
  .title {
    font-size: 30px;
    text-align: center;
-   font-family: 'rulergold';
+   font-family: 'awemono';
+   text-transform: uppercase;
    padding: 10px 0;
+   -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-smooth: none;
  }
 
  #wrapper {
@@ -145,6 +149,9 @@
    background-color: var(--mid-color);
    color: var(--dkest-color);
    font-size: 1.5em;
+   -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+font-smooth: antialiased;
 
  }
 
