@@ -30,7 +30,7 @@
          }
       }
       function urlUpdate(element) {
-         console.log(element.id);
+         window.history.pushState(element.id, '', '#'+element.id);
       }
    </script>
 
@@ -54,32 +54,42 @@
                <iframe name="mainHub" src="/frame/frameindex.html" align="center" width=100% height=500px
                   frameborder="0"></iframe>
             </div>
-            <div class="box-three" style="height:500px; overflow:auto;overflow-x: hidden;"> <!-- This is the navigation box -->
+            <div class="box-three" style="height:500px; overflow:auto;overflow-x: hidden;">
+               <!-- This is the navigation box -->
                <div class="section-title" style="top:0; width:100%; ">NaviBar</div>
-               <a href="/frame/frameindex.html"target="mainHub" onClick="urlUpdate(this)"><button style="width:100%;">Index</button></a>
-               <a href="/frame/aboutme.html"target="mainHub" onClick="urlUpdate(this)" id="aboutme"><button style="width:100%;">About
+               <a href="/frame/frameindex.html" target="mainHub" onClick="urlUpdate(this)"><button
+                     style="width:100%;">Index</button></a>
+               <a href="/frame/aboutme.html" target="mainHub" onClick="urlUpdate(this)" id="aboutme"><button
+                     style="width:100%;">About
                      me/Links</button></a>
-               <a href="/frame/webreccs.html"target="mainHub" onClick="urlUpdate(this)" id="webreccs"><button
+               <a href="/frame/webreccs.html" target="mainHub" onClick="urlUpdate(this)" id="webreccs"><button
                      style="width:100%">Buttons/Quizzes</button></a>
-               <a href="/shrines/reagan.html" id="reagan"target="mainHub" onClick="urlUpdate(this)"><button style="width:100%;">Reagan
+               <a href="/shrines/reagan.html" id="reagan" target="mainHub" onClick="urlUpdate(this)"><button
+                     style="width:100%;">Reagan
                      Shrine</button></a>
-               <a href="/shrines/reigen.html" id="reigen"target="mainHub" onClick="urlUpdate(this)"><button style="width:100%;">Reigen
+               <a href="/shrines/reigen.html" id="reigen" target="mainHub" onClick="urlUpdate(this)"><button
+                     style="width:100%;">Reigen
                      Shrine</button></a>
-               <a href="/frame/articles.html" id="articles"target="mainHub" onClick="urlUpdate(this)"><button style="width:100%;">Articles
+               <a href="/frame/articles.html" id="articles" target="mainHub" onClick="urlUpdate(this)"><button
+                     style="width:100%;">Articles
                      <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
                            style="--i:3">W</span><span style="--i:4">!</span>]</span></button></a>
-               <a href="/shrines/skittles.html"target="mainHub" onClick="urlUpdate(this)" id="skittles"><button style="width:100%;">Skittles the
+               <a href="/shrines/skittles.html" target="mainHub" onClick="urlUpdate(this)" id="skittles"><button
+                     style="width:100%;">Skittles the
                      Bird <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
                            style="--i:3">W</span><span style="--i:4">!</span>]</span></button></a>
-               <a href="/frame/myart.html"target="mainHub" onClick="urlUpdate(this)"()" onClick="urlUpdate()" id="myart"><button style="width:100%;">Art/OCs
+               <a href="/frame/myart.html" target="mainHub" onClick="urlUpdate(this)" ()" onClick="urlUpdate()"
+                  id="myart"><button style="width:100%;">Art/OCs
                      <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
                            style="--i:3">W</span><span style="--i:4">!</span>]</span></button></a>
-               <a href="/frame/resources.html"target="mainHub" onClick="urlUpdate(this)" id="resources"><button style="width:100%;">Resources
+               <a href="/frame/resources.html" target="mainHub" onClick="urlUpdate(this)" id="resources"><button
+                     style="width:100%;">Resources
                      <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
                            style="--i:3">W</span><span style="--i:4">!</span>]</span></button></a>
-                           <a href="/frame/randomimage.html"target="mainHub" onClick="urlUpdate(this)" id="randomimage"><button style="width:100%;">Random Meme
-                              <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
-                                    style="--i:3">W</span><span style="--i:4">!</span>]</span></button></a>
+               <a href="/frame/randomimage.html" target="mainHub" onClick="urlUpdate(this)" id="randomimage"><button
+                     style="width:100%;">Random Meme
+                     <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
+                           style="--i:3">W</span><span style="--i:4">!</span>]</span></button></a>
                <a href="/oldindex.html"><button style="width:100%;">Classic Homepage</button></a>
             </div>
          </div>
