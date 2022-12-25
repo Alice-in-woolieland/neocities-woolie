@@ -33,7 +33,27 @@
          window.history.pushState(element.id, '', '#' + element.id);
       }
    </script>
+   <script>
+      /* When the user clicks on the button,
+   toggle between hiding and showing the dropdown content */
+      function myFunction() {
+         document.getElementById("myDropdown").classList.toggle("show");
+      }
 
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function (event) {
+         if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+               }
+            }
+         }
+      }
+   </script>
 </head>
 
 <body class="scroll" onload="triggerBtnClick()">
@@ -64,12 +84,17 @@
                      me/Links</button></a>
                <a href="/frame/webreccs.html" target="mainHub" onClick="urlUpdate(this)" id="webreccs"><button
                      style="width:100%">Buttons/Quizzes</button></a>
-               <a href="/shrines/reagan.html" id="reagan" target="mainHub" onClick="urlUpdate(this)"><button
-                     style="width:100%;">Reagan
-                     Shrine</button></a>
-               <a href="/shrines/reigen.html" id="reigen" target="mainHub" onClick="urlUpdate(this)"><button
-                     style="width:100%;">Reigen
-                     Shrine</button></a>
+                     <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn" >Shrines</button>
+                        <div id="myDropdown" class="dropdown-content">
+                           <a href="/shrines/reagan.html" id="reagan" target="mainHub" onClick="urlUpdate(this)">Reagan
+                              Shrine</a>
+                              <a href="/shrines/reigen.html" id="reigen" target="mainHub" onClick="urlUpdate(this)">Reigen
+                                 Shrine</a>
+                        </div>
+                      </div> 
+               
+               
                <a href="/frame/articles.html" id="articles" target="mainHub" onClick="urlUpdate(this)"><button
                      style="width:100%;">Articles
                      <span class="waviy">[<span style="--i:1">N</span><span style="--i:2">E</span><span
