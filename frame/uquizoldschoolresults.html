@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+    <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+        <label for="quiztitle">Title of Quiz:</label><br>
+        <input type="text" id="quiztitle" name="quiztitle" value="Which Color are You!!" required><br>
+        <label for="result">Result:</label><br>
+        <input type="text" id="result" name="result" value="Blue" required><br>
+        <label for="desc">Description:</label><br>
+        <input type="text"id="desc" name="desc" value ="You are incredibly calming to be around."><br>
+        <label for="quizurl">URL:</label><br>
+        <input type="text" id="quizurl" name="quizurl" value="URL"><br><br>
+        <button onClick="quizResults(quiztitle, result, desc, quizurl);">Give me my results!</button>
+
+<script>
+    function quizResults(quiztitle, result, desc, quizurl) {
+     document.write("<table bgcolor="#FF1493" border=1><tr><td><center><font color="#000000"><big>"+results+"</big><br>#FF1493</font></center></td></tr><tr><td bgcolor="#FFFFFF"><center><font color="#000000" size=-1><br>"+description+"<br></font></center></td></tr><tr><td><center><a style='color:black;' href='"+weburl+"' target='_blank'>"+title+"</a></center></td></tr></table>")
+    }
+</script>
+</body>
+</html>
