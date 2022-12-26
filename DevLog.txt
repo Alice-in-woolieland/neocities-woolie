@@ -63,6 +63,28 @@ As long as I give all of my links IDs, then I can redirect people to specific pa
 
 I have this function trigger on load, so it loads near instantly alongside the webpage. 
 
-For now, that's all I have to say about my webpage. I feel like the rest of it is pretty straightforward. I hope to add a directory page so that people can better inspect my code. 
+When you click on links, now it also adds a hash to my website url without refreshing. Using this code, also convieniently located in the <head> of my index.html file, 
 
-I also hope to add permalinks that allow people to link to specific pages. Of course, this is all going to be in the future. 
+<script>
+      function urlUpdate(element) {
+         window.history.pushState(element.id, '', '#' + element.id);
+      }
+</script>
+
+Then, in the links you want to be able to redirect to, you add this section of code. 
+
+onClick="urlUpdate(this)"
+
+To recreate within your own website, copy this example code. 
+
+<script>
+      function urlUpdate(element) {
+         window.history.pushState(element.id, '', '#' + element.id);
+      }
+</script>
+
+<a href="#" id="websitelink" onClick="urlUpdate(this)">Link</a>
+
+This script allows the funcion to take the element's ID and put it inside the URL without refreshing the page, so when the link is clicked, it adds a hash to the url. This behavior is perfect because it makes permalinking accessable, without overly bloating the code. 
+
+For now, that's all I have to say about my webpage. I feel like the rest of it is pretty straightforward. I hope to add a directory page so that people can better inspect my code. 
