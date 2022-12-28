@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML tutorials</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        textarea {
+            resize: none;
+            background-color: var(--lt-color);
+            color: var(--dk-color);
+            border: 1px solid var(--accent);
+        }
+
+        textarea::selection {
+            background: var(--accent);
+        }
+
+        textarea::-moz-selection {
+            background: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <div class="borderbox" style="text-align:center;">
+            <h3>HTML CODE SEGMENTS TO COPY</h3>
+            I noticed that there is a severe lack of resources that give people code pieces of code to copy. Often resources like stack overflow fall flat when it comes to trying to learn new things!
+            <br><br>
+            So I'm here to give you guys a straight answer.
+            <h3>Directory</h3>
+            <a href="#imagegallery">Automatically Scaling Image Gallery</a>
+            <br><br>
+            <div class="h4" id="imagegallery">Images in rows (autoscale)</div><br>
+            An example of this is shown on this page of my website: <a href="/index.html/#skittles" target="_blank">Skittles Image Gallery</a><Br><br>
+            In order to use this, copy the below code into your stylesheet, or put it in &lt;style&gt;&lt;/style&gt;
+            tags.<br><br>
+            <textarea readonly rows="10" cols="30">
+.imagegallery img {
+    width: 50%;
+    min-width: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: auto;
+    object-fit: cover;
+ }
+      
+.imagegallery {
+    width: 98%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+}
+            </textarea><br><br>
+            Then, copy the following text where you want the images in your document. <br><br>
+            <textarea readonly rows="10" cols="30">
+<div class="imagegallery">
+<img src="image1.png">
+<img src="image2.png">
+<img src="image3.png">
+<img src="image4.png">
+<img src="image5.png">
+</div>
+            </textarea><br><br>
+            Don't forget to change the src="" links to the images you want. <br><br>
+            If you want to edit the width of a specific image, add style='width:__%' to your img tag.<br><br>
+        </div>
+    </div>
+</body>
+
+</html>
