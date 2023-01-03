@@ -7,26 +7,107 @@
   <!-- want to have modal, cant figure it out currently. aaughghh.  -->
   <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
 <style>
-    body {
-        background-color:rgb(193, 191, 157);
+  .image {
+      padding: 5px;
+      box-sizing: border-box;
+      flex-shrink: 3;
+      height: 300px;
+      padding:5px;
+      width:min-content;
     }
-    .textbox {
-        border: 5px solid darkblue;
-        border-radius: 10px;
-        padding: 5px;
-        background-color: rgba(114, 115, 67, 0.567);
-        width:50vh;
+    .image img{
+      z-index: 0;
+      position: relative;
+      flex-shrink: 1;
+      height:100%;
+      min-width: none;
+      width:fit-content;
+    }
+    .imagegallery {
+      width: 98%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .imagegallery .image>.desc {
+      background-color:rgba(255, 255, 255, 0.8);
+      z-index: 5;
+      display: none;
+      border-radius: 5px;
+      padding: 5px;
+      padding-bottom: 20px;
+      position: relative;
+      margin: 5px;
+    }
+    .imagegallery .image:hover .desc{
+      display: block;
+      position: relative;
+      z-index: 5;
+    }
+    .imagegallery .image:hover img{
+      height:100%;
+    }
+    .image a {
+      color:var(--dk-color);
     }
 </style>
 </head>
-
+<!--im going to kill because this shit is so stupiddd i wanna do it without js. i know u can do this without js. LET ME DO THIS WITHOUT JS.-->
 <body>
   <div align="center">
-    <h3> Favorite Games </h3>
-    <div class="textbox">
-        reccetear is a video game in which u are a ltitle girl :3
+    <h3>Games</h3>
+    <div class="imagegallery">
+      <div class="image">
+      <img src="https://static.wikia.nocookie.net/splatoon/images/2/29/Splatoon_3's_Cover.jpg">
+      <div class="desc">
+        <h3>SPLATOON 3</h3>
+        ★★★★★<br><br>
+        Very good game silly little squid kids. I love them (the cephalopals)
+      </div>
+      </div>
+      <div class="image">
+        <img src="https://m.media-amazon.com/images/I/81OjYchYXzL.jpg">
+        <div class="desc">
+          <h3>PUYO PUYO TETRIS</h3>
+          ★★★★☆<br><br>
+          The best tetris experience I've ever played. It has completely configurable buttons and the large variety of gamemodes. With the inclusion of a handicap makes it the perfect way to play tetris in a group. 
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg">
+          <div class="desc">
+          <h3>BREATH OF<br>THE WILD</h3>
+          ★★★★★<br><br>
+          Considered one of the worlds best video games for a reason. I managed to not get past the plateau on my first playthrough, mostly because I was playing completely blind with 0 help, and missed the fact that I had to pick up a weapon of some kind.
+        </div>
+        
+      </div>
+      <div class="image">
+        <img src="https://www.gamespot.com/a/uploads/scale_medium/mig/5/2/7/0/2225270-logo_plus_characters.jpg">
+          <div class="desc">
+          <h3>RECETTEAR</h3>
+          ★★★★☆<br><br>
+          Super cute, management sim. Capitalism HO! Game can get kind of repetitive and dull, but that is due to the way I play my game, rather than a specific issue with the game itself. It can be kind of obtuse at times, especially with communicating certain mechanics. I would be very interested in a remaster. 
+        </div> 
+      </div>
+      <div class="image">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTJmYjFiZjYtN2U3Ni00NGE3LTkyOWUtYmExYjU0M2ZhNDdhXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg">
+          <div class="desc">
+          <h3>FANTASY LIFE</h3>
+          ★★★★☆<br><br>
+          I like this game a lot, it's super easy to pour hours into and its incredibly charming. If this was on steam, people would consider it an underrated classic in the RPG genre, but it's a 3DS exclusive. It isn't even one of those games that requires two screens to play. Apparently there was another game for mobile phones only in Japan. Minus a star for all of this, plus the subtle racism when it comes to their "desert" land.
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://e.snmc.io/lk/l/x/64fed2f6862b49f9a93503f372f5d223/9738752">
+          <div class="desc">
+          <h3>WOBBLEDOGS</h3>
+          ★★★★★<br><br>
+          THE DOGS THEY WOBBLE 
+        </div>
+      </div>
     </div>
-
     <span>⠀</span><!-- braille blank is placed here -->
     <!-- The Modal -->
   </div>
