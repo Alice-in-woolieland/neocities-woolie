@@ -324,6 +324,15 @@
  }
 
  /* animations */
+ @-webkit-keyframes floating {
+   from {
+     transform: translateY(5px);
+   }
+
+   to {
+     transform: translateY(-5px);
+   }
+ }
  @keyframes floating {
    from {
      transform: translateY(5px);
@@ -335,16 +344,22 @@
  }
 
  .floating {
-   animation-name: floating;
-   animation-duration: 4s;
-   animation-direction: alternate;
-   animation-iteration-count: infinite;
+   -webkit-animation-name: floating;
+           animation-name: floating;
+   -webkit-animation-duration: 4s;
+           animation-duration: 4s;
+   -webkit-animation-direction: alternate;
+           animation-direction: alternate;
+   -webkit-animation-iteration-count: infinite;
+           animation-iteration-count: infinite;
  }
 
  /* for pixel art */
  .pixel {
    image-rendering: crisp-edges;
-   image-rendering: pixelated;
+   -ms-interpolation-mode: nearest-neighbor;
+       image-rendering: -moz-crisp-edges;
+       image-rendering: pixelated;
  }
 
  /* iframe boxes */
@@ -372,9 +387,24 @@
    position: relative;
    display: inline-block;
    font-weight: bold;
-   animation: waviy 1s infinite;
-   animation-delay: calc(.1s * var(--i));
+   -webkit-animation: waviy 1s infinite;
+           animation: waviy 1s infinite;
+   -webkit-animation-delay: calc(.1s * var(--i));
+           animation-delay: calc(.1s * var(--i));
 
+ }
+
+ @-webkit-keyframes waviy {
+
+   0%,
+   40%,
+   100% {
+     transform: translateY(0)
+   }
+
+   20% {
+     transform: translateY(-5px)
+   }
  }
 
  @keyframes waviy {
@@ -389,3 +419,52 @@
      transform: translateY(-5px)
    }
  }
+
+ .image {
+  padding: 5px;
+  box-sizing: border-box;
+  flex-shrink: 3;
+  height: 300px;
+  padding:5px;
+  width:-webkit-min-content;
+  width:-moz-min-content;
+  width:min-content;
+}
+.image img{
+  z-index: 0;
+  position: relative;
+  flex-shrink: 1;
+  height:100%;
+  min-width: none;
+  width:-webkit-fit-content;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+.imagegallery {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.imagegallery .image>.desc {
+  background-color:rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  display: none;
+  border-radius: 5px;
+  padding: 5px;
+  padding-bottom: 20px;
+  position: relative;
+  margin: 5px;
+}
+.imagegallery .image:hover .desc{
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+.imagegallery .image:hover img{
+  height:100%;
+}
+.image a {
+  color:var(--dk-color);
+}
