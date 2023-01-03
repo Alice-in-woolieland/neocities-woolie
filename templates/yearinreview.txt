@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="#" rel="stylesheet" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,900&display=swap');
+        body 
+        {
+            background-color:seashell;
+            font-family: 'Raleway', sans-serif;
+            color:indigo;
+        }
+        .art {
+            background-color:slateblue;
+            width:100px;
+            height:200px;
+            border-radius:5px;
+            transform:skewX(-15deg);
+            margin-bottom:5px;
+            margin-left:3px;
+            overflow:hidden;
+            border:4px solid slateblue;
+            position:relative;
+            z-index:1;
+        }
+        .art img{
+            transform:skewX(15deg);
+            margin:-35px;
+            height:215px;
+            width:160px;
+            object-fit:cover;
+
+        }
+        .art .m {
+            z-index:5;
+            position:relative;
+            font-size:15px;
+            margin:5px;
+            background-color:seashell;
+            border-radius: 5px;
+        }
+        table {
+            margin:auto;
+        }
+        h1 {
+            margin-bottom:0;
+        }
+        .big {
+            font-size:60px;
+            -webkit-text-stroke: 3px indigo;
+	        -webkit-text-fill-color: seashell;
+        }
+        .art:hover img{
+            opacity:0.2;
+            transition:250ms;
+        }
+        a {
+            text-decoration:none;
+            color:indigo;
+        }
+    </style>
+<!--Do not mess with the style tags please!-->
+</head>
+<!--
+    To move the images around, change object-position:0% 0%; to any percentages.
+    change src="/randomimage/x.jpg" to image links
+-->
+<body>
+<table>
+    <tr>
+    <td><h1><span class="big">2022</span><i> My Year in Art</i></h1></td>
+</tr>
+<tr>
+<td>
+<table>
+    <tr>
+        <td><a href="#yourposthere"><div class="art"><span class="m">January</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">Febuary</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">March</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">April</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">May</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">June</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+    </tr>
+    <tr>
+        <td><a href="#yourposthere"><div class="art"><span class="m">July</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">August</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">September</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">October</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">November</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+        <td><a href="#yourposthere"><div class="art"><span class="m">December</span><img style="object-position:0% 0%;" src="#"></div></a></td>
+    </tr>
+</table>
+</td>
+</tr>
+<td><div style="text-align:right; margin-right:35px;">Created by <a href="https://woolie.neocities.org/" style="text-decoration:underline;">woolie.neocities</a> • Inspired by <a href="https://www.tumblr.com/cantobear/704837263196094464/thank-you-for-sticking-around-for-another-amazing" style="text-decoration:underline;">@Cantobear</a></div></td>
+</table>
+</body>
+
+</html>
