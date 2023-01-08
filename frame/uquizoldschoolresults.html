@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Image</title>
     <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        .column {
+            padding:1px;
+            border:none;
+            margin-bottom:.5em;
+        }
+        input {
+            font-family:'MS PGothic';
+            width:100%;
+            margin-bottom:.5em;
+        }
+        label {
+            float:left;
+        }
+        .newbox {
+            width:50vw;
+            margin:auto;
+        }
+        textarea {
+            background-color:white;
+            color:black;
+            height:90%;
+            resize:none;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -36,8 +61,10 @@ document.getElementById('quiz').addEventListener('submit', (event) => {
     event.preventDefault();
 });
         </script>
+        <div class="borderbox" style="text-align:center;">
         <h3>Reformat Uquiz Results into HTML</h3>
     <form id="quiz" name="quiz">
+        <div class="newbox">
         <label for="quiztitle">Title of Quiz:</label><br>
         <input type="text" id="quiztitle" name="quiztitle" placeholder="Which Color are You!!"><br>
         <label for="result">Result:</label><br>
@@ -46,16 +73,23 @@ document.getElementById('quiz').addEventListener('submit', (event) => {
         <input type="text"id="desc" name="desc" placeholder="You are incredibly calming to be around."><br>
         <label for="quizurl">URL:</label><br>
         <input type="text" id="quizurl" name="quizurl" placeholder="URL"><br><br>
+        </div>
         <button type="button" onClick="printToConsole()">Update Page</button>
         <br><br>
+        <div class="row">
+            <div class="column">
         <div id="resultPrinted">
             <table bgcolor="#FF1493" border=1><tr><td><center><font color="#000000"><big id="resultFinal">you are deeppink</big><br><span id="titleFinal">what color are you quiz</span></span></font></center></td></tr><tr><td bgcolor="#FFFFFF"><center><font color="#000000" size=-1 id="descFinal">You like deep pink :3</font></center></td></tr><tr><td><center><a style="color:black;" id="URLFinal" href="http://spacefem.com/quizzes/colors" target="_blank">the spacefem.com html color quiz</a><br><a href="https://woolie.neocities.org/" target="_blank" style="color:black; font-size:x-small">woolie.neocities.org</a></center></td></tr></table>
+            </div>
+            </div>
+            <div class="column">
+            <textarea id="resultCode" name="resultCode" readonly >Code will appear here.
+            </textarea>
+            </div>
+            </div>
         </div>
         <br>
-        <textarea id="resultCode" name="resultCode" >
-Code Here
-        </textarea>
     </form>
-
+</div>
 </body>
 </html>
