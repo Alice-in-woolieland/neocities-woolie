@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +7,55 @@
     <link href="/basic.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-        <label for="quiztitle">Title of Quiz:</label><br>
-        <input type="text" id="quiztitle" name="quiztitle" value="Which Color are You!!" required><br>
-        <label for="result">Result:</label><br>
-        <input type="text" id="result" name="result" value="Blue" required><br>
-        <label for="desc">Description:</label><br>
-        <input type="text"id="desc" name="desc" value ="You are incredibly calming to be around."><br>
-        <label for="quizurl">URL:</label><br>
-        <input type="text" id="quizurl" name="quizurl" value="URL"><br><br>
-        <button onClick="quizResults(quiztitle, result, desc, quizurl);">Give me my results!</button>
+    <script>
+function printToConsole() {
+    const form  = document.getElementById('quiz');
+    const quiztitle = form.elements['quiztitle'];
+    const result = form.elements['result'];
+    const desc = form.elements['desc'];
+    const quizurl = form.elements['quizurl'];
 
-<script>
-    function quizResults(quiztitle, result, desc, quizurl) {
-     document.write("<table bgcolor="#FF1493" border=1><tr><td><center><font color="#000000"><big>"+results+"</big><br>#FF1493</font></center></td></tr><tr><td bgcolor="#FFFFFF"><center><font color="#000000" size=-1><br>"+description+"<br></font></center></td></tr><tr><td><center><a style='color:black;' href='"+weburl+"' target='_blank'>"+title+"</a></center></td></tr></table>")
-    }
-</script>
+    let QuizTitle = quiztitle.value;
+    let Result = result.value;
+    let Description = desc.value;
+    let QuizURL = quizurl.value;
+
+    console.log(QuizTitle+Result+Description+QuizURL);
+    document.getElementById("resultFinal").innerHTML = Result;
+    document.getElementById("titleFinal").innerHTML = QuizTitle;
+    document.getElementById("descFinal").innerHTML = Description;
+    document.getElementById("URLFinal").innerHTML = QuizTitle;
+    document.getElementById("URLFinal").href = QuizURL;
+    printToTextArea();
+}
+function printToTextArea() {
+    const code = document.getElementById("resultPrinted").innerHTML;
+    document.getElementById("resultCode").innerHTML = code;
+}
+document.getElementById('quiz').addEventListener('submit', (event) => {
+    event.preventDefault();
+});
+        </script>
+        <h3>Reformat Uquiz Results into HTML</h3>
+    <form id="quiz" name="quiz">
+        <label for="quiztitle">Title of Quiz:</label><br>
+        <input type="text" id="quiztitle" name="quiztitle" placeholder="Which Color are You!!"><br>
+        <label for="result">Result:</label><br>
+        <input type="text" id="result" name="result" placeholder="Blue"><br>
+        <label for="desc">Description:</label><br>
+        <input type="text"id="desc" name="desc" placeholder="You are incredibly calming to be around."><br>
+        <label for="quizurl">URL:</label><br>
+        <input type="text" id="quizurl" name="quizurl" placeholder="URL"><br><br>
+        <button type="button" onClick="printToConsole()">Update Page</button>
+        <br><br>
+        <div id="resultPrinted">
+            <table bgcolor="#FF1493" border=1><tr><td><center><font color="#000000"><big id="resultFinal">you are deeppink</big><br><span id="titleFinal">what color are you quiz</span></span></font></center></td></tr><tr><td bgcolor="#FFFFFF"><center><font color="#000000" size=-1 id="descFinal">You like deep pink :3</font></center></td></tr><tr><td><center><a style="color:black;" id="URLFinal" href="http://spacefem.com/quizzes/colors" target="_blank">the spacefem.com html color quiz</a><br><a href="https://woolie.neocities.org/" target="_blank" style="color:black; font-size:x-small">woolie.neocities.org</a></center></td></tr></table>
+        </div>
+        <br>
+        <textarea id="resultCode" name="resultCode" >
+Code Here
+        </textarea>
+    </form>
+
 </body>
 </html>
