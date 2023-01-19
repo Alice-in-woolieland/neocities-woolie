@@ -426,19 +426,12 @@
   flex-shrink: 3;
   height: 300px;
   padding:5px;
-  width:-webkit-min-content;
-  width:-moz-min-content;
-  width:min-content;
+  width:auto;
 }
 .image img{
   z-index: 0;
   position: relative;
-  flex-shrink: 1;
   height:100%;
-  min-width: none;
-  width:-webkit-fit-content;
-  width:-moz-fit-content;
-  width:fit-content;
 }
 .imagegallery {
   width: 98%;
