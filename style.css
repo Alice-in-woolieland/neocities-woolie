@@ -319,11 +319,17 @@
   }
 }
  /* pagedoll */
- @media screen and (max-width: 1100px) {
+ @media screen and (max-width: 1000px) {
    .pagedoll {
      display: none;
    }
  }
+ @media screen and (max-width: 1400px) {
+  .pagedoll img{
+    height: 20vw;
+    width:auto;
+  }
+}
 
  .pagedoll:hover {
    transform: rotate(-1deg) scale(1.01);
