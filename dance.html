@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DANCING CENTRAL</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:url" content="." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DANCING CENTRAL" />
+    <meta property="og:description" content="dacnce." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function show(divID) {
+        var x = document.getElementById(divID);
+        var y = document.getElementsByClassName("body");
+        for (let i = 0; i < y.length; i++) {
+          var scene = y[i];
+          scene.style.display = "none";
+        }
+        x.style.display = "block";
+      }
+      function updatebpm() {
+        var bpm = document.getElementById("bpm");
+        var element = document.getElementById("bpmtest");
+        element.innerHTML = bpm.value;
+      }
+    </script>
+    <style>
+      /*
+    https://64.media.tumblr.com/c00aafe875285fb6437e10341c6d8d9b/541bb39023577b9a-9f/s400x600/ceb0152dc14a138ff2a241160ed365d0c7ed1cfb.gif
+    https://64.media.tumblr.com/15dcc5e65415fe8cd0515cba362115b5/56727c752895dbbc-96/s400x600/463d3714a22af980d41794814f1dadde2bfda5fb.gif
+    */
+      body {
+        background-color: black;
+        background-image: url("/images/whtsparkle.gif");
+      }
+      .body {
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 300px;
+        width: 600px;
+        margin: auto;
+        margin-top: 50px;
+        background-position: center;
+        image-rendering: pixelated;
+      }
+      #poolparty {
+        background-image: url("https://64.media.tumblr.com/e1ae6a7aa4c2de99fd2a46cbf326ba3b/6a6ed6a5eef6f6d9-24/s400x600/fe0eb7b8056eadd83f05e4df889b3974e258f531.gif ");
+        display: none;
+      }
+      #ocean {
+        background-image: url("https://64.media.tumblr.com/7a35b75f5f15bc190733a81628e56837/56727c752895dbbc-01/s500x750/d20fddc9efee0f6680121037d19fe4c1e48d81bd.gif");
+        display:none;
+      }
+      #aliens {
+        background-image: url("https://64.media.tumblr.com/097dcf57e6c0101e6628b3215646bbee/56727c752895dbbc-95/s400x600/6402395975baaedaf79c5d6785980f94029eb0ce.gif");
+        display: none;
+      }
+      #danceclub {
+        background-image: url("/images/danceclub.gif");
+      }
+      .title {
+        color: white;
+        margin: auto;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 3em;
+        margin-bottom: -1em;
+      }
+      .options {
+        position: absolute;
+        width: 150px;
+        height: 100%;
+        background-color: black;
+        margin: -7px;
+        margin-top: -8px;
+        opacity: 0.1;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .options:hover {
+        opacity: 1;
+      }
+      .options > input {
+        width:50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="options">
+      <h2>Options</h2>
+      <h3>Backdrop</h3>
+      <button onClick="show('danceclub')">Stage</button>
+      <button onClick="show('poolparty')">Pool Party</button>
+      <button onClick="show('ocean')">Ocean</button>
+      <button onClick="show('aliens')">Aliens</button>
+      
+      <!--<h3>BPM</h3>
+      <input type="number" id="bpm" name="bpm" value="100"/>
+      <button onClick="updatebpm()">enter</button>
+    secret setting im going to add in later <3-->
+    </div>
+    <div class="title">LET'S MEET AT THE</div>
+    <div id="danceclub" class="body">
+      <img src="https://64.media.tumblr.com/7f7fd393854cae7347881e6190e2fecf/a6a64b3ff131adbf-1f/s75x75_c1/1f3caa9f3914825410c3ae1222e8ee66f4a71abf.gif" style="position:absolute; margin-left:10px; margin-top:160px;">
+      <img
+        src="/images/lain.gif"
+        style="position: absolute; margin-left: 40px; margin-top: 55px"
+        height="160"
+      />
+      <img
+        src="/images/rindance.gif"
+        style="position: absolute; margin-left: 180px; margin-top: 80px"
+        height="120"
+      />
+      <img
+        src="/images/lookathergo.gif"
+        style="position: absolute; margin-left: 250px; margin-top: 90px"
+      />
+      <img
+        src="/images/tewy.gif"
+        style="position: absolute; margin-top: 127px; margin-left: 40px"
+        height="170"
+      />
+      <img
+        src="/images/cirno.gif"
+        style="position: absolute; margin-left: 400px; margin-top: 25px"
+      />
+      <img
+        src="/images/anime-dance-vyn-anime-dance.gif"
+        style="position: absolute; margin-left: 128px; margin-top: 140px"
+        height="150"
+      />
+      <img
+        src="/images/kangeldance.gif"
+        style="position: absolute; margin-left: 350px; margin-top: 130px"
+        height="120"
+      />
+      <img
+        src="/images/oddwebsite-anime.gif"
+        style="position: absolute; margin-left: 450px; margin-top: 145px"
+        height="110"
+      />
+      <img
+        src="/images/shigure-goddess-ezgif.com-crop.gif"
+        style="position: absolute; margin-left: 250px; margin-top: 160px"
+        height="120"
+      />
+      <img
+        src="/images/cinnamoroll.gif"
+        style="position: absolute; margin-left: 380px; margin-top: 205px"
+      />
+      <img
+        src="/images/jellyfish2.gif"
+        style="position: absolute; margin-left: 520px; margin-top: 250px"
+      />
+      <img
+        src="/images/jellyfish.gif"
+        style="position: absolute; margin-left: 530px; margin-top: 50px"
+      />
+    </div>
+    <div id="poolparty" class="body">
+      <img
+        src="/images/lain.gif"
+        style="position: absolute; margin-left: 40px"
+        height="160"
+      />
+      <img
+        src="/images/rindance.gif"
+        style="position: absolute; margin-left: 290px; margin-top: 45px"
+        height="120"
+      />
+      <img
+        src="/images/lookathergo.gif"
+        style="position: absolute; margin-left: 200px; margin-top: 100px"
+      />
+      <img
+        src="/images/tewy.gif"
+        style="position: absolute; margin-top: 100px; margin-left: 40px"
+        height="170"
+      />
+      <img
+        src="/images/cirno.gif"
+        style="position: absolute; margin-left: 200px"
+      />
+      <img
+        src="/images/anime-dance-vyn-anime-dance.gif"
+        style="position: absolute; margin-left: 128px; margin-top: 115px"
+        height="150"
+      />
+      <img
+        src="/images/kangeldance.gif"
+        style="position: absolute; margin-left: 330px; margin-top: 120px"
+        height="120"
+      />
+      <img
+        src="/images/oddwebsite-anime.gif"
+        style="position: absolute; margin-left: 420px; margin-top: 135px"
+        height="110"
+      />
+      <img
+        src="/images/shigure-goddess-ezgif.com-crop.gif"
+        style="position: absolute; margin-left: 250px; margin-top: 160px"
+        height="120"
+      />
+      <img
+        src="/images/cinnamoroll.gif"
+        style="position: absolute; margin-left: 380px; margin-top: 205px"
+      />
+      <img
+        src="/images/jellyfish2.gif"
+        style="position: absolute; margin-left: 470px; margin-top: 250px"
+      />
+      <img
+        src="/images/jellyfish.gif"
+        style="position: absolute; margin-left: 530px; margin-top: 50px"
+      />
+    </div>
+    <div id="ocean" class="body">
+      <img
+        src="/images/lain.gif"
+        style="position: absolute; margin-left: 40px; margin-top:-30px;"
+        height="150"
+      />
+      <img
+        src="/images/rindance.gif"
+        style="position: absolute; margin-left: 290px; margin-top: 45px"
+        height="120"
+      />
+      <img
+        src="/images/lookathergo.gif"
+        style="position: absolute; margin-left: 200px; margin-top: 100px"
+      />
+      <img
+        src="/images/tewy.gif"
+        style="position: absolute; margin-top: 100px; margin-left: 40px"
+        height="170"
+      />
+      <img
+        src="/images/cirno.gif"
+        style="position: absolute; margin-left: 200px"
+      />
+      <img
+        src="/images/anime-dance-vyn-anime-dance.gif"
+        style="position: absolute; margin-left: 128px; margin-top: 115px"
+        height="150"
+      />
+      <img
+        src="/images/kangeldance.gif"
+        style="position: absolute; margin-left: 330px; margin-top: 120px"
+        height="120"
+      />
+      <img
+        src="/images/oddwebsite-anime.gif"
+        style="position: absolute; margin-left: 420px; margin-top: 135px"
+        height="110"
+      />
+      <img
+        src="/images/shigure-goddess-ezgif.com-crop.gif"
+        style="position: absolute; margin-left: 250px; margin-top: 160px"
+        height="120"
+      />
+      <img
+        src="/images/cinnamoroll.gif"
+        style="position: absolute; margin-left: 380px; margin-top: 205px"
+      />
+      <img
+        src="/images/jellyfish2.gif"
+        style="position: absolute; margin-left: 470px; margin-top: 250px"
+      />
+      <img
+        src="/images/jellyfish.gif"
+        style="position: absolute; margin-left: 530px; margin-top: 50px"
+      />
+    </div>
+    <div id="aliens" class="body">
+      <img
+        src="/images/lain.gif"
+        style="position: absolute; margin-left: 40px"
+        height="160"
+      />
+      <img
+        src="/images/rindance.gif"
+        style="position: absolute; margin-left: 290px; margin-top: 45px"
+        height="120"
+      />
+      <img
+        src="/images/lookathergo.gif"
+        style="position: absolute; margin-left: 200px; margin-top: 100px"
+      />
+      <img
+        src="/images/tewy.gif"
+        style="position: absolute; margin-top: 100px; margin-left: 40px"
+        height="170"
+      />
+      <img
+        src="/images/cirno.gif"
+        style="position: absolute; margin-left: 200px"
+      />
+      <img
+        src="/images/anime-dance-vyn-anime-dance.gif"
+        style="position: absolute; margin-left: 128px; margin-top: 115px"
+        height="150"
+      />
+      <img
+        src="/images/kangeldance.gif"
+        style="position: absolute; margin-left: 330px; margin-top: 120px"
+        height="120"
+      />
+      <img
+        src="/images/oddwebsite-anime.gif"
+        style="position: absolute; margin-left: 420px; margin-top: 135px"
+        height="110"
+      />
+      <img
+        src="/images/shigure-goddess-ezgif.com-crop.gif"
+        style="position: absolute; margin-left: 250px; margin-top: 160px"
+        height="120"
+      />
+      <img
+        src="/images/cinnamoroll.gif"
+        style="position: absolute; margin-left: 380px; margin-top: 205px"
+      />
+      <img
+        src="/images/jellyfish2.gif"
+        style="position: absolute; margin-left: 470px; margin-top: 250px"
+      />
+      <img
+        src="/images/jellyfish.gif"
+        style="position: absolute; margin-left: 530px; margin-top: 50px"
+      />
+    </div>
+    <div class="title">DANCE PARTYYYY</div>
+    <div id="bpmtest"></div>
+  </body>
+</html>
