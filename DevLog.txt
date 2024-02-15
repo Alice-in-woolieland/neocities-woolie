@@ -88,3 +88,6 @@ To recreate within your own website, copy this example code.
 This script allows the funcion to take the element's ID and put it inside the URL without refreshing the page, so when the link is clicked, it adds a hash to the url. This behavior is perfect because it makes permalinking accessable, without overly bloating the code. 
 
 For now, that's all I have to say about my webpage. I feel like the rest of it is pretty straightforward. I hope to add a directory page so that people can better inspect my code. 
+
+2/15/24:
+I got a lot of performance anxiety over my webbed site. which is wild to think about. Anyways, I've stopped caring and I threw together a secret page. it's woolie.neocities.org/dance.html! go check it out
